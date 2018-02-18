@@ -6,3 +6,5 @@ b = ['a', 'b', 'c', 'd']
 
 for x in chain(a,b):
     print(x)
+    
+print('ha ha 3'.split(None, 1))

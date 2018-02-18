@@ -1,3 +1,5 @@
+from collections import Iterable
+
 class Node:
     def __init__(self, value):
         self._value = value
@@ -16,6 +18,12 @@ class Node:
         yield self
         for c in self:
             yield from c.DFS()
+    
+    '''def DFS_2(self):
+        if isinstance(self, Iterable):
+            yield from self._children
+        else:
+            yield self._children'''
 
 #if __name__ == '___main_':
 root = Node(0)
@@ -29,5 +37,7 @@ c1.add_child(Node(4))
 c1.add_child(Node(5))
 c2.add_child(Node(6))
 
-for c in root.DFS():
-    print(c)
+#for c in root.DFS():
+    #print(c)
+'''for c in root.DFS_2():
+    print(c)'''
